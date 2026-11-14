@@ -1,0 +1,8 @@
+# Herramientas locales (no forman parte de la web)
+.agents/
+.claude/
+.taste-skill/
+.playwright-mcp/
+shots/
+skills-lock.json
+prueba.html

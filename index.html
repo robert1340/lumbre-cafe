@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="es" data-type="place" data-radius="sharp" data-buttons="solid">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lumbre · Café de especialidad en Chamberí, Madrid</title>
+<meta name="description" content="Cafetería de especialidad en Chamberí, Madrid. Espresso, filtro y café que tostamos cada martes. De lunes a viernes de 8:00 a 18:00.">
+<meta name="site-kind" content="other">
+<meta name="page-type" content="place">
+<meta name="page-kind" content="place">
+<meta name="theme-color" content="#f6f1e7">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lumbre · Café de especialidad en Chamberí">
+<meta property="og:description" content="Espresso, filtro y café que tostamos cada martes, en Chamberí.">
+<meta property="og:image" content="assets/img/photo-m61713028-1280.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23a3472b'/%3E%3Crect x='7' y='9' width='18' height='3' fill='%23fff'/%3E%3Crect x='9' y='15' width='14' height='3' fill='%23fff'/%3E%3Crect x='11' y='21' width='10' height='3' fill='%23fff'/%3E%3C/svg%3E">
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400..600&family=Work+Sans:wght@400..600&display=swap" rel="stylesheet">
+<style>
+/* Deal: palette flour-terracotta (suelo de harina y la terracota de un horno de tueste) · type vollkorn (Vollkorn / Work Sans)
+   · hero place (Recipe 3) · nav-split · footer-visit · rhythm colour-band · buttons solid · mark stack
+   · carta strip · el local trio · type moment name (close-word) · moment picture-develops (#tueste) */
+:root {
+  --p-bg: #f6f1e7; --p-surface: #ebe3d4; --p-ink: #2b241e; --p-muted: #4f463d;
+  --p-accent: #a3472b; --p-action: #a3472b; --p-action-ink: #ffffff;
+  --p-brand: #7c3420; --p-brand-ink: #fbf6ee;
+  --p-line: #d9cfbe;
+  /* tokens the kit's moment reads */
+  --bg: var(--p-bg); --surface: var(--p-surface); --ink: var(--p-ink); --muted: var(--p-muted); --accent: var(--p-accent); --line: var(--p-line);
+  --font-display: "Vollkorn", Georgia, serif;
+  --font-text: "Work Sans", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.015em;
+
+  --container: 1200px;
+  --gut: 120px;
+  --gutter: 24px;
+  --nav: 72px;
+  --padt: 96px;
+  --padb: 48px;
+  --bar: 0px;
+  --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px; --s-6: 32px; --s-7: 48px; --s-8: 64px;
+  --head-gap: 40px;
+  --t-h1: clamp(40px, 4.9vw, 72px);
+  --t-h2: clamp(30px, 3.2vw, 46px);
+  --t-lead: clamp(18px, 1.5vw, 21px);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+@media (max-width: 1279px) { :root { --gut: 64px; } }
+@media (max-width: 1023px) { :root { --gut: 40px; } }
+@media (max-width: 767px) { :root { --gut: 16px; --nav: 64px; --padt: 96px; --padb: 56px; --bar: 72px; } }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: var(--nav); }
+body {
+  margin: 0; background: var(--p-bg); color: var(--p-ink);
+  font: 400 16px/1.5 var(--font-text);
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: var(--display-weight); letter-spacing: var(--display-tracking); margin: 0; text-wrap: balance; }
+h1 { font-size: var(--t-h1); line-height: 1.02; }
+h2 { font-size: var(--t-h2); line-height: 1.1; }
+p { margin: 0; text-wrap: pretty; }
+ul { margin: 0; padding: 0; list-style: none; }
+figure { margin: 0; }
+:focus-visible { outline: 2px solid var(--p-accent); outline-offset: 3px; }
+
+.wrap { width: min(100% - 2 * var(--gut), var(--container)); margin-inline: auto; }
+.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
+.grid > * { min-width: 0; }
+
+/* ---------- buttons, links ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 48px; padding: 0 22px; border: 0; border-radius: 2px;
+  background: var(--p-action); color: var(--p-action-ink);
+  font: 500 16px/1 var(--font-text); text-decoration: none; cursor: pointer; white-space: nowrap;
+  transition: transform 160ms var(--ease-out), background-color 200ms ease;
+}
+.btn svg { transition: transform 200ms var(--ease-out); }
+.btn:active { transform: scale(0.97); }
+.btn--inv { background: var(--p-brand-ink); color: var(--p-brand); }
+.link {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px;
+  font-weight: 500; text-decoration: none;
+  background: linear-gradient(currentColor, currentColor) 0 calc(50% + 0.8em) / 0% 1px no-repeat;
+  transition: background-size 260ms var(--ease-out);
+}
+.link svg { transition: transform 200ms var(--ease-out); }
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover { background: #8d3c24; transform: translateY(-1px); }
+  .btn--inv:hover { background: #ffffff; }
+  .btn:hover svg, .link:hover svg { transform: translateX(3px); }
+  .btn:active { transform: scale(0.97); }
+  .link:hover, .nav__link:hover { background-size: 100% 1px; }
+}
+
+/* ---------- nav (nav-split), fixed ---------- */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; height: var(--nav); background: var(--p-bg); border-bottom: 1px solid var(--p-line); }
+.nav__bar { position: relative; height: 100%; display: flex; align-items: center; gap: var(--s-6); }
+.skip-link { position: absolute; left: 0; top: 50%; z-index: 2; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.skip-link:focus { width: auto; height: 48px; padding: 0 var(--s-5); clip-path: none; transform: translateY(-50%); display: inline-flex; align-items: center; background: var(--p-ink); color: var(--p-bg); text-decoration: none; }
+.logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font: 500 24px/1 var(--font-display); letter-spacing: -0.01em; min-height: 44px; }
+.mark { width: 22px; height: 18px; display: grid; gap: 3px; justify-items: center; }
+.mark i { display: block; height: 4px; background: var(--p-accent); }
+.mark i:nth-child(1) { width: 22px; } .mark i:nth-child(2) { width: 16px; } .mark i:nth-child(3) { width: 10px; }
+.nav__links { display: flex; gap: var(--s-6); margin-left: auto; }
+.nav__link {
+  display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; font-weight: 500;
+  background: linear-gradient(currentColor, currentColor) 0 calc(50% + 0.8em) / 0% 1px no-repeat;
+  transition: background-size 260ms var(--ease-out);
+}
+.nav__toggle { display: none; margin-left: auto; width: 48px; height: 48px; border: 0; background: transparent; color: var(--p-ink); align-items: center; justify-content: center; cursor: pointer; }
+.nav__toggle:active { transform: scale(0.95); }
+.menu {
+  position: fixed; inset: var(--nav) 0 0 0; z-index: 49; background: var(--p-bg);
+  padding: var(--s-7) var(--gut); display: flex; flex-direction: column;
+  opacity: 0; visibility: hidden; transform: translateY(-8px);
+  transition: opacity 220ms var(--ease-out), transform 220ms var(--ease-out), visibility 0s linear 220ms;
+}
+.menu.is-open { opacity: 1; visibility: visible; transform: none; transition: opacity 260ms var(--ease-out), transform 260ms var(--ease-out); }
+.menu a:not(.btn) { font: 400 40px/1.15 var(--font-display); text-decoration: none; padding: 8px 0; border-bottom: 1px solid var(--p-line); }
+.menu .btn { margin-top: var(--s-6); }
+
+/* ---------- sections: exactly one screen each on a desktop ---------- */
+main > section { height: 100vh; height: 100svh; padding: var(--padt) 0 calc(var(--padb) + var(--bar)); overflow: clip; }
+main > section > .wrap { height: 100%; }
+.head-row { margin-bottom: var(--head-gap); align-items: start; }
+.head-row h2 { grid-column: 1 / span 6; }
+.head-row__side { grid-column: 7 / span 6; display: flex; align-items: flex-start; justify-content: space-between; gap: var(--s-5); padding-top: 6px; }
+.head-row__side .link { margin-top: -12px; }
+.label { font: 500 13px/1.4 var(--font-text); letter-spacing: 0.02em; text-transform: uppercase; }
+.pl-photo { overflow: hidden; }
+.pl-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ---------- hero (place, Recipe 3) ---------- */
+main > section.hero { --photo: max(240px, calc(100svh - var(--nav) - 340px)); position: relative; padding: calc(var(--nav) + var(--photo) + 48px) 0 48px; }
+.hero__bg { position: absolute; left: 0; right: 0; top: var(--nav); z-index: 0; width: 100%; height: var(--photo); max-width: none; object-fit: cover; object-position: 60% 50%; }
+.hero > .wrap { position: relative; z-index: 1; height: auto; }
+.hero__text { row-gap: var(--s-5); align-items: start; }
+.hero h1 { grid-column: 1 / span 6; }
+.hero__side { grid-column: 7 / span 6; display: grid; gap: var(--s-5); justify-items: start; }
+.hero h1 { text-box: trim-start cap alphabetic; }
+.hero__lead { font-size: var(--t-lead); line-height: 1.45; max-width: 36ch; }
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } }
+@keyframes settle { from { opacity: 0.4; transform: scale(1.04); } }
+.m-enter [data-enter] .hero__bg { animation: settle 1100ms var(--ease-out) both; }
+.m-enter [data-enter] h1 { animation: rise 700ms var(--ease-out) 100ms both; }
+.m-enter [data-enter] .hero__lead { animation: rise 700ms var(--ease-out) 180ms both; }
+.m-enter [data-enter] .hero__side .btn { animation: rise 700ms var(--ease-out) 240ms both; }
+
+/* ---------- visit ---------- */
+#visit > .wrap { display: flex; flex-direction: column; }
+#visit h2 { margin-bottom: var(--head-gap); }
+#visit .grid { flex: 1 1 0; min-height: 0; }
+.visit { grid-column: 1 / span 6; align-self: start; background: var(--p-surface); padding: var(--s-7); display: grid; align-content: start; gap: var(--s-6); }
+.visit__cols { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-5); }
+.visit__addr { font-size: 20px; line-height: 30px; }
+.hours li { display: flex; justify-content: space-between; gap: var(--s-4); padding: 10px 0; border-bottom: 1px solid var(--p-line); font-variant-numeric: tabular-nums; }
+.hours li:first-child { padding-top: 0; }
+.hours li.is-today { font-weight: 600; }
+.visit__rows li { min-height: 44px; display: flex; align-items: center; border-top: 1px solid var(--p-line); }
+.visit__photo { grid-column: 7 / span 6; height: 100%; }
+
+/* ---------- carta (strip) ---------- */
+.group { grid-column: span 4; }
+.group .label { margin-bottom: var(--s-3); display: block; }
+.rows li { display: flex; justify-content: space-between; align-items: baseline; gap: var(--s-4); padding: 9px 0; border-bottom: 1px solid var(--p-line); min-height: 64px; }
+.rows__name { font-weight: 500; }
+.rows__name small { display: block; font-weight: 400; font-size: 16px; color: var(--p-muted); }
+.rows__value { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.strip { margin-top: var(--head-gap); row-gap: var(--gutter); }
+.strip .pl-photo { grid-column: span 3; aspect-ratio: 1; }
+
+/* ---------- tueste (picture-develops) ---------- */
+.roast { align-items: start; }
+.roast__text { grid-column: 1 / span 5; display: grid; gap: var(--s-5); align-content: start; }
+.roast__text .lead { font-size: 20px; line-height: 30px; }
+.roast__photo { grid-column: 7 / span 6; aspect-ratio: 4 / 5; max-height: 100%; width: 100%; }
+
+/* moment: picture-develops (film look), once, as the roast photograph comes on screen */
+[data-moment="picture-develops"] { position: relative; overflow: hidden; }
+[data-moment="picture-develops"] > img { transition: filter 1600ms var(--ease-out), transform 1400ms cubic-bezier(.16, 1, .3, 1); }
+[data-moment="picture-develops"].is-armed > img { filter: grayscale(1) contrast(.55) brightness(1.32); transform: scale(1.06); }
+[data-moment="picture-develops"].is-done > img { filter: none; transform: none; }
+@media (prefers-reduced-motion: reduce) { [data-moment="picture-develops"] > img { filter: none !important; transform: none !important; } }
+
+/* ---------- el local (trio) ---------- */
+#local > .wrap { display: flex; flex-direction: column; }
+.trio { flex: 1 1 0; min-height: 0; }
+.trio .pl-photo { height: 100%; }
+.trio .pl-photo:nth-child(1) { grid-column: 1 / span 5; }
+.trio .pl-photo:nth-child(2) { grid-column: 6 / span 4; }
+.trio .pl-photo:nth-child(3) { grid-column: 10 / span 3; }
+
+/* ---------- footer.closing (colour-band, close-word, footer-visit): one screen on the brand ground ---------- */
+.closing { height: 100vh; height: 100svh; padding: var(--padt) 0 calc(var(--padb) + var(--bar)); background: var(--p-brand); color: var(--p-brand-ink); --p-line: rgba(251, 246, 238, 0.28); }
+.closing :focus-visible { outline-color: var(--p-brand-ink); }
+.closing > .wrap { position: relative; z-index: 1; height: 100%; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); grid-template-rows: minmax(0, 1fr) auto auto auto; row-gap: var(--s-5); }
+.close__text { grid-column: 1 / span 6; display: grid; gap: var(--s-4); justify-items: start; align-content: start; }
+.close__text p { font-size: var(--t-lead); }
+.close__text .btn { margin-top: var(--s-3); }
+.close__photo { grid-column: 7 / span 6; height: 100%; min-height: 0; }
+.close__name { grid-column: 1 / -1; font: 400 min(10vw, 136px)/0.8 var(--font-display); letter-spacing: -0.04em; margin: 0; padding: 0.04em 0 0.08em; }
+.foot__addr { grid-column: 1 / span 6; display: grid; gap: var(--s-2); align-content: start; }
+.foot__addr .big { font: 400 28px/36px var(--font-display); text-decoration: none; min-height: 0; justify-self: start; }
+.foot__hours { grid-column: 7 / span 6; }
+.foot__hours .label { display: block; margin-bottom: var(--s-2); }
+.foot__hours .hours li { padding: 6px 0; }
+.foot__legal { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 var(--s-6); font-size: 14px; }
+.foot__nav { display: flex; flex-wrap: wrap; gap: 0 var(--s-6); }
+.foot__legal details summary { cursor: pointer; min-height: 44px; display: inline-flex; align-items: center; }
+.foot__legal details ul { margin: var(--s-2) 0 var(--s-4); display: grid; gap: 6px; max-width: 80ch; }
+.foot__legal details a { overflow-wrap: anywhere; display: inline-block; padding: 4px 0; }
+
+/* ---------- phone action bar ---------- */
+.actionbar { display: none; }
+
+/* ---------- tablet and phone: sections grow with what they hold ---------- */
+@media (max-width: 1023px) {
+  main > section:not(.hero) { height: auto; min-height: 100vh; min-height: 100svh; }
+  main > section:not(.hero) > .wrap { height: auto; }
+  .hero h1, .hero__side { grid-column: 1 / -1; }
+  .hero__side { padding-top: 0; }
+  .visit, .visit__photo { grid-column: 1 / -1; }
+  .visit__photo { margin-top: var(--gutter); height: auto; aspect-ratio: 4 / 3; }
+  #visit .grid { flex: none; }
+  .group { grid-column: span 6; }
+  .group:last-child { grid-column: 1 / -1; }
+  .group:last-child .rows { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--gutter); }
+  .head-row h2, .head-row__side { grid-column: 1 / -1; }
+  .head-row__side { margin-top: var(--s-3); }
+  .roast { row-gap: var(--s-7); }
+  .roast__text, .roast__photo { grid-column: 1 / -1; }
+  .roast__photo { aspect-ratio: 4 / 3; }
+  .closing { height: auto; min-height: 100vh; min-height: 100svh; }
+  .closing > .wrap { height: auto; grid-template-rows: none; row-gap: var(--s-6); }
+  .close__text, .close__photo, .foot__addr, .foot__hours { grid-column: 1 / -1; }
+  .close__photo { height: auto; aspect-ratio: 16 / 9; }
+}
+@media (max-width: 767px) {
+  .nav__links, .nav__cta { display: none; }
+  .nav__toggle { display: inline-flex; }
+  main > section.hero { --photo: max(220px, calc(100svh - var(--nav) - 360px)); padding: calc(var(--nav) + var(--photo) + 32px) 0 32px; }
+  .hero__side, .hero__side .btn { justify-items: stretch; width: 100%; }
+  .head-row__side { flex-direction: column; gap: var(--s-2); }
+  .visit { padding: var(--s-5); }
+  .visit__cols { grid-template-columns: 1fr; gap: var(--s-6); }
+  .visit__addr { font-size: 18px; line-height: 28px; }
+  .group, .group:last-child { grid-column: 1 / -1; }
+  .group:last-child .rows { display: block; }
+  .strip .pl-photo { grid-column: span 6; }
+  .trio { row-gap: var(--gutter); flex: none; }
+  .trio .pl-photo { height: auto; aspect-ratio: 4 / 5; }
+  .trio .pl-photo:nth-child(1) { grid-column: 1 / -1; aspect-ratio: 4 / 5; }
+  .trio .pl-photo:nth-child(2), .trio .pl-photo:nth-child(3) { grid-column: span 6; aspect-ratio: 1; }
+  .close__text .btn { width: 100%; }
+  .close__name { font-size: 26vw; }
+  .foot__addr .big { font-size: 26px; line-height: 34px; }
+  .close__name { font-size: 26vw; }
+  .foot__legal { flex-direction: column; align-items: flex-start; }
+  .actionbar {
+    display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+    padding: 12px var(--gut) calc(12px + env(safe-area-inset-bottom));
+    background: var(--p-bg); border-top: 1px solid var(--p-line);
+    transform: translateY(110%); transition: transform 260ms var(--ease-out);
+  }
+  .actionbar.is-shown { transform: none; }
+  .actionbar .btn { width: 100%; }
+}
+@media (max-width: 380px) { .menu a:not(.btn) { font-size: 34px; } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 1ms !important; animation-delay: 0ms !important; transition-duration: 1ms !important; }
+}
+</style>
+</head>
+<body>
+<!-- Plan: place (cafetería de especialidad) · compact page, 11 fotografías (stand-ins de biblioteca)
+     Deal: palette flour-terracotta · type vollkorn · hero place · nav-split · footer-visit · colour-band · solid · mark stack
+     · carta strip · el local trio (wall re-dealt) · type moment name (close-word) · moment picture-develops (#tueste) -->
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">Saltar al contenido</a>
+    <a class="logo" href="#top" aria-label="Lumbre, inicio"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>Lumbre</a>
+    <nav class="nav__links" aria-label="Principal">
+      <a class="nav__link" href="#carta">Carta</a>
+      <a class="nav__link" href="#tueste">Tueste</a>
+      <a class="nav__link" href="#local">El local</a>
+      <a class="nav__link" href="#visit">Visítanos</a>
+    </nav>
+    <a class="btn nav__cta" href="https://www.google.com/maps/search/?api=1&query=Chamber%C3%AD%2C%20Madrid" target="_blank" rel="noopener">Ver la zona</a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+      <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M3 8h16M3 14h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div class="menu" id="menu" hidden>
+    <a href="#carta">Carta</a>
+    <a href="#tueste">Tueste</a>
+    <a href="#local">El local</a>
+    <a href="#visit">Visítanos</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" data-enter aria-labelledby="hero-h">
+    <img class="hero__bg" data-phone-fill src="assets/img/photo-m61713028-1280.jpg" srcset="assets/img/photo-m61713028-500.jpg 500w, assets/img/photo-m61713028-960.jpg 960w, assets/img/photo-m61713028-1280.jpg 1280w" sizes="(max-width: 639px) 188vw, 100vw" width="1280" height="853" alt="Espresso cayendo de un portafiltro sin fondo en una máquina cromada" fetchpriority="high" decoding="async" data-source="library-057" data-subject="bar">
+    <div class="wrap"><div class="hero-text"><div class="hero__text grid">
+      <h1 id="hero-h">Café de especialidad en Chamberí</h1>
+      <div class="hero__side">
+        <p class="hero__lead">Tostamos cada martes y servimos de lunes a viernes, <span data-assumed>de 8:00 a 18:00</span>.</p>
+        <a class="btn" id="hero-cta" href="https://www.google.com/maps/search/?api=1&query=Chamber%C3%AD%2C%20Madrid" target="_blank" rel="noopener">Ver la zona
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div></div></div>
+  </section>
+
+  <section id="visit" data-place="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <h2 id="visit-h">Visítanos</h2>
+      <div class="grid">
+        <div class="visit">
+          <div class="visit__cols">
+            <div>
+              <p class="visit__addr"><a class="link" href="https://www.google.com/maps/search/?api=1&query=Chamber%C3%AD%2C%20Madrid" target="_blank" rel="noopener">Chamberí, Madrid</a></p>
+              <p style="margin-top: 8px;">A cinco minutos a pie de la glorieta de Bilbao.</p>
+            </div>
+            <ul class="hours" data-assumed aria-label="Horario">
+              <li data-days="1,2,3,4,5"><span>Lunes a viernes</span><span>8:00–18:00</span></li>
+              <li data-days="6"><span>Sábado</span><span>9:00–15:00</span></li>
+              <li data-days="0"><span>Domingo</span><span>9:00–14:00</span></li>
+            </ul>
+          </div>
+          <ul class="visit__rows">
+            <li>Entrada a pie de calle, sin escalones.</li>
+            <li>Wifi en la barra larga; mesas sin portátil los fines de semana.</li>
+          </ul>
+        </div>
+        <figure class="pl-photo visit__photo">
+          <img src="assets/img/photo-m189498721.jpg" srcset="assets/img/photo-m189498721-500.jpg 500w, assets/img/photo-m189498721-960.jpg 960w, assets/img/photo-m189498721.jpg 1280w" sizes="(max-width: 1023px) 100vw, 1000px" width="1280" height="853" alt="Una bandeja con cuatro cafés recorre una barra de madera" loading="lazy" decoding="async" data-source="library-057" data-subject="bar" style="object-position: 45% 60%">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="carta" aria-labelledby="carta-h">
+    <div class="wrap">
+      <div class="grid head-row">
+        <h2 id="carta-h">La carta de la barra</h2>
+        <div class="head-row__side"><p>Leche entera o de avena, sin coste extra.</p></div>
+      </div>
+      <div class="grid" data-assumed>
+        <div class="group">
+          <span class="label">Espresso</span>
+          <ul class="rows">
+            <li><span class="rows__name">Espresso<small>Doble, 36 g en taza</small></span><span class="rows__value">1,80 €</span></li>
+            <li><span class="rows__name">Cortado<small>Espresso y un dedo de leche</small></span><span class="rows__value">2,00 €</span></li>
+            <li><span class="rows__name">Flat white<small>Doble, 160 ml</small></span><span class="rows__value">3,00 €</span></li>
+            <li><span class="rows__name">Cappuccino<small>Espuma densa, 200 ml</small></span><span class="rows__value">2,80 €</span></li>
+          </ul>
+        </div>
+        <div class="group">
+          <span class="label">Filtro</span>
+          <ul class="rows">
+            <li><span class="rows__name">V60 de origen<small>Esta semana: Huila, Colombia</small></span><span class="rows__value">3,50 €</span></li>
+            <li><span class="rows__name">Café de jarra<small>Recién hecho cada hora</small></span><span class="rows__value">2,50 €</span></li>
+            <li><span class="rows__name">Cold brew<small>Macerado 16 horas</small></span><span class="rows__value">3,50 €</span></li>
+            <li><span class="rows__name">Espresso tonic<small>Con piel de naranja</small></span><span class="rows__value">3,80 €</span></li>
+          </ul>
+        </div>
+        <div class="group">
+          <span class="label">Para acompañar</span>
+          <ul class="rows">
+            <li><span class="rows__name">Cruasán de mantequilla<small>Del obrador de enfrente</small></span><span class="rows__value">2,40 €</span></li>
+            <li><span class="rows__name">Tostada de masa madre<small>Tomate y aceite de oliva</small></span><span class="rows__value">3,80 €</span></li>
+            <li><span class="rows__name">Bizcocho de plátano<small>Hecho aquí cada mañana</small></span><span class="rows__value">3,20 €</span></li>
+            <li><span class="rows__name">Galleta de avena<small>Con chocolate negro</small></span><span class="rows__value">2,00 €</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid strip">
+        <figure class="pl-photo"><img src="assets/img/photo-m28989985-1200.webp" width="1200" height="857" alt="Una mano sostiene una taza blanca bajo el portafiltro mientras cae el espresso" loading="lazy" decoding="async" data-source="library-057" data-subject="bar" style="object-position: 62% 62%"></figure>
+        <figure class="pl-photo"><img src="assets/img/photo-m187311853-1200.webp" width="1200" height="800" alt="Manos de barista prensando café molido en el portafiltro" loading="lazy" decoding="async" data-source="library-057" data-subject="bar" style="object-position: 58% 50%"></figure>
+        <figure class="pl-photo"><img src="assets/img/photo-m201752739-960.jpg" srcset="assets/img/photo-m201752739-500.jpg 500w, assets/img/photo-m201752739-960.jpg 960w" sizes="(max-width: 767px) 50vw, 25vw" width="960" height="1433" alt="Leche texturizándose en una jarra roja junto a la máquina" loading="lazy" decoding="async" data-source="library-057" data-subject="bar" style="object-position: 40% 55%"></figure>
+        <figure class="pl-photo"><img src="assets/img/photo-m61713103.jpg" srcset="assets/img/photo-m61713103-500.jpg 500w, assets/img/photo-m61713103-960.jpg 960w, assets/img/photo-m61713103.jpg 1280w" sizes="(max-width: 767px) 50vw, 25vw" width="1280" height="853" alt="Café de filtro goteando en una jarra de cristal sobre una báscula" loading="lazy" decoding="async" data-source="library-057" data-subject="bar" style="object-position: 58% 45%"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="tueste" aria-labelledby="tueste-h">
+    <div class="wrap grid roast">
+      <div class="roast__text">
+        <h2 id="tueste-h">Tostamos los martes, en tandas de 12 kilos</h2>
+        <p class="lead">Compramos a tres fincas de Colombia, Etiopía y Brasil y tostamos claro, para que el café sepa a fruta y no a quemado. Lo que sale el martes se sirve hasta el lunes siguiente.</p>
+        <ul class="rows" data-assumed>
+          <li><span class="rows__name">Bolsa de 250 g<small>Grano o molido para tu cafetera</small></span><span class="rows__value">desde 13 €</span></li>
+          <li><span class="rows__name">Bolsa de 1 kg<small>Para oficinas y casas con mucho café</small></span><span class="rows__value">desde 42 €</span></li>
+        </ul>
+        <p><a class="link" href="#visit">Pide tu bolsa en la barra
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+      </div>
+      <figure class="pl-photo roast__photo" data-moment="picture-develops">
+        <img src="assets/img/photo-m147143943.jpg" srcset="assets/img/photo-m147143943-500.jpg 500w, assets/img/photo-m147143943-960.jpg 960w, assets/img/photo-m147143943.jpg 1280w" sizes="(max-width: 1023px) 100vw, 1110px" width="1280" height="853" alt="Los últimos granos tostados caen en la bandeja de enfriado mientras gira el brazo" loading="lazy" decoding="async" data-source="library-057" data-subject="roast" style="object-position: 42% 55%">
+      </figure>
+    </div>
+  </section>
+
+  <section id="local" aria-labelledby="local-h">
+    <div class="wrap">
+      <div class="grid head-row">
+        <h2 id="local-h">Del grano verde a tu taza</h2>
+        <div class="head-row__side">
+          <p>Seleccionamos, tostamos y servimos en el mismo local.</p>
+          <a class="link" href="#visit">Ven a verlo
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+      <div class="grid trio">
+        <figure class="pl-photo"><img src="assets/img/photo-m61714648-500.jpg" width="500" height="746" sizes="(max-width: 767px) 100vw, 34vw" alt="Espresso vertido desde una jarrita a una taza blanca sobre una barra de madera" loading="lazy" decoding="async" data-source="library-057" data-subject="hands" style="object-position: 60% 70%"></figure>
+        <figure class="pl-photo"><img src="assets/img/photo-m62054123-960.jpg" srcset="assets/img/photo-m62054123-500.jpg 500w, assets/img/photo-m62054123-960.jpg 960w" sizes="(max-width: 767px) 75vw, 960px" width="960" height="640" alt="Una mano selecciona granos de café verde en una cesta" loading="lazy" decoding="async" data-source="library-057" data-subject="roast" style="object-position: 25% 35%"></figure>
+        <figure class="pl-photo"><img src="assets/img/photo-c141-960.jpg" srcset="assets/img/photo-c141-500.jpg 500w, assets/img/photo-c141-960.jpg 960w, assets/img/photo-c141.jpg 1280w" sizes="(max-width: 767px) 75vw, 960px" width="960" height="640" alt="Leche vertida desde una jarra de acero en una taza oscura sostenida con dos manos" loading="lazy" decoding="async" data-source="library-057" data-subject="hands" style="object-position: 35% 55%"></figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="closing" id="visita-pie" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="close__text">
+      <h2 id="close-h">El café de esta semana ya está en la barra</h2>
+      <p>Huila, Colombia: notas de ciruela y panela.</p>
+      <a class="btn btn--inv" href="#carta">Ver la carta
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <figure class="pl-photo close__photo"><img src="assets/img/photo-m147143898-1200.webp" width="1200" height="800" sizes="(max-width: 1023px) 100vw, 50vw" alt="Granos recién tostados en el muestreador, con el tambor desenfocado detrás" loading="lazy" decoding="async" data-source="library-057" data-subject="roast" style="object-position: 45% 50%"></figure>
+    <p class="close__name" aria-hidden="true">Lumbre</p>
+    <div class="foot__addr">
+      <span class="label">Dónde estamos</span>
+      <a class="big link" href="https://www.google.com/maps/search/?api=1&query=Chamber%C3%AD%2C%20Madrid" target="_blank" rel="noopener">Chamberí, Madrid</a>
+      <p>Metro Bilbao (líneas 1 y 4), a cinco minutos a pie. <a class="link" href="mailto:hola@lumbre.example">Escríbenos</a></p>
+    </div>
+    <div class="foot__hours">
+      <span class="label">Horario</span>
+      <ul class="hours" data-assumed>
+        <li data-days="1,2,3,4,5"><span>Lunes a viernes</span><span>8:00–18:00</span></li>
+        <li data-days="6"><span>Sábado</span><span>9:00–15:00</span></li>
+        <li data-days="0"><span>Domingo</span><span>9:00–14:00</span></li>
+      </ul>
+    </div>
+    <div class="foot__legal">
+      <nav class="foot__nav" aria-label="Pie de página">
+        <a class="nav__link" href="#carta">Carta</a>
+        <a class="nav__link" href="#tueste">Tueste</a>
+        <a class="nav__link" href="#local">El local</a>
+        <a class="nav__link" href="#visit">Visítanos</a>
+      </nav>
+      <details>
+          <summary>© 2026 Lumbre · Fotografías vía Wikimedia Commons</summary>
+          <ul>
+            <li>Shixart1985, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Serving_coffee_in_a_cafe_during_the_morning_hours_with_a_waiter_carrying_a_tray_of_drinks_for_customers.jpg" target="_blank" rel="noopener">archivo</a></li>
+            <li>Thomas Martinsen, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a>, <a href="https://commons.wikimedia.org/wiki/File:Drip_brewing_(Unsplash).jpg" target="_blank" rel="noopener">archivo</a></li>
+            <li>Shixart1985, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Barista_pours_steamed_milk_into_a_red_pitcher_during_coffee_preparation_in_a_cafe.jpg" target="_blank" rel="noopener">archivo</a></li>
+            <li>Takeaway, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Double_ristretto_naked_portafilter.jpg" target="_blank" rel="noopener">archivo</a></li>
+            <li>Blake Richard Verdoorn, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a>, <a href="https://commons.wikimedia.org/wiki/File:Latte_in_a_coffee_machine_(Unsplash).jpg" target="_blank" rel="noopener">archivo</a></li>
+            <li>Jameswasswa, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Final_part_of_the_roasted_beans_out_for_cooling.jpg" target="_blank" rel="noopener">archivo</a></li>
+            <li>Joshua Newton, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a>, <a href="https://commons.wikimedia.org/wiki/File:Joshua_Newton_2016-10-01_(Unsplash_XpyD7z6AP4g).jpg" target="_blank" rel="noopener">archivo</a></li>
+            <li>Jameswasswa, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Closer_look_at_the_progress_of_the_coffee_beans_in_the_roasting_machine_as_they_change_color.jpg" target="_blank" rel="noopener">archivo</a></li>
+            <li>Shixart1985, <a href="https://creativecommons.org/licenses/by/2.0" target="_blank" rel="noopener">CC BY 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Barista_prepares_espresso_at_coffee_shop.jpg" target="_blank" rel="noopener">archivo</a></li>
+            <li>Chevanon Photography, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a>, <a href="https://commons.wikimedia.org/wiki/File:Close-up_of_Woman_Holding_Coffee_Cup_at_Cafe_(28217840617).jpg" target="_blank" rel="noopener">archivo</a></li>
+            <li>Nathan Dumlao, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a>, <a href="https://commons.wikimedia.org/wiki/File:Nathan_Dumlao_2017-05-27_(Unsplash).jpg" target="_blank" rel="noopener">archivo</a></li>
+          </ul>
+        </details>
+    </div>
+  </div>
+</footer>
+
+<nav class="actionbar" aria-label="Acción rápida">
+  <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Chamber%C3%AD%2C%20Madrid" target="_blank" rel="noopener">Ver la zona</a>
+</nav>
+
+<script>
+(function () {
+  var d = new Date().getDay();
+  document.querySelectorAll('.hours li[data-days]').forEach(function (li) {
+    if (li.dataset.days.split(',').indexOf(String(d)) > -1) { li.classList.add('is-today'); li.setAttribute('aria-current', 'date'); }
+  });
+
+  var toggle = document.querySelector('.nav__toggle');
+  var menu = document.getElementById('menu');
+  function setMenu(open) {
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    toggle.querySelector('path').setAttribute('d', open ? 'M5 5l12 12M17 5L5 17' : 'M3 8h16M3 14h16');
+    document.body.style.overflow = open ? 'hidden' : '';
+    if (open) { menu.hidden = false; requestAnimationFrame(function () { menu.classList.add('is-open'); }); }
+    else { menu.classList.remove('is-open'); setTimeout(function () { if (!menu.classList.contains('is-open')) menu.hidden = true; }, 240); }
+  }
+  toggle.addEventListener('click', function () { setMenu(toggle.getAttribute('aria-expanded') !== 'true'); });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') { setMenu(false); toggle.focus(); } });
+  window.matchMedia('(min-width: 768px)').addEventListener('change', function (m) { if (m.matches) setMenu(false); });
+
+  // Phone bar: shown once the hero's button has scrolled away, hidden over the footer
+  var bar = document.querySelector('.actionbar');
+  var heroCta = document.getElementById('hero-cta');
+  var foot = document.querySelector('.foot__addr');
+  var heroGone = false, footIn = false;
+  function update() { bar.classList.toggle('is-shown', heroGone && !footIn); }
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) { heroGone = !es[0].isIntersecting && es[0].boundingClientRect.top < 0; update(); }).observe(heroCta);
+    new IntersectionObserver(function (es) { footIn = es[0].isIntersecting; update(); }).observe(foot);
+
+    // Moment: the roast photograph develops once (armed just before it scrolls in, so it never stays hidden)
+    var dev = document.querySelector('[data-moment="picture-develops"]');
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (dev && !reduced) {
+      var r = dev.getBoundingClientRect();
+      if (r.top > window.innerHeight) {
+        dev.classList.add('is-armed');
+        var io = new IntersectionObserver(function (es) {
+          if (!es[0].isIntersecting) return;
+          io.disconnect();
+          requestAnimationFrame(function () { dev.classList.add('is-done'); dev.classList.remove('is-armed'); });
+        }, { threshold: 0.3 });
+        io.observe(dev);
+      }
+    }
+  }
+})();
+</script>
+</body>
+</html>
